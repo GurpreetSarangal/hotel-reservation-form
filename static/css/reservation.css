@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#main{
+    margin: 4rem 6rem;
+    /* background-color: rgba(127, 214, 255, 0.192); */
+    
+}
+
+.hidden{
+    display: none;
+}
+.pointer-hover:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+span.error.fail-alert {
+    border: 2px solid rgba(255, 0, 0, 0.432);
+    border-radius: 4px;
+    line-height: 1;
+    padding: 2px 0 6px 6px;
+    margin: 3px;
+    color: rgba(151, 66, 66, 0.863);
+    background: #ffe6eb;
+}
+input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+}
+
+@media only screen and (max-width: 576px) { 
+    #vr-1{
+        height: 0px !important;
+        display: none !important;
+        /* height: 0px !important; */
+    }
+  }

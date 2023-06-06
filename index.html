@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request to book</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/reservation.css">
+    <link rel="icon" type="image/x-icon" href="./static/images/icon2.ico">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-evenly justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <h2>Dorothy</h2>
+            </a>
+
+            <div class="text-dark">Reservation Form</div>
+        </header>
+    </div>
+
+          
+      <div class="container">
+        <form action="#" method="post" id="reservation-form">
+        <div class="mb-4">
+            <div class="form-label">
+                <label for="first-name" class="form-label">Full Name</label>
+            </div>
+            
+            <div class="row">
+                <div class=" col-sm-6 col-12">
+                        <input type="text" id="first-name" class="form-control" name="FirstName" >
+                        <label for="first-name" class="form-text">First Name</label>
+                </div>
+                <div class="col-sm-6 col-12">
+                        <input type="text" id="last-name" class="form-control" name="LastName"     >
+                        <label for="last-name" class="form-text">Last Name</label> 
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="mb-4 row">
+            <div class="col-sm-6 col-12 mb-2">
+                <div class="form-floating">
+                    <input type="email" id="email" name="Email" class="form-control" placeholder="example@gmail.com"/> 
+                    <label for="email" class="form-label">Contact Email</label>
+                </div>
+                
+            </div>
+            
+            <!-- <div class="col-sm-6 col-12 mb-2">
+                <div class="form-floating">
+                    <input type="number" id="coustomerID" name="CoustomerID" class="form-control" placeholder="-"> 
+                    <label for="coustomerID" class="form-label">CoustomerID</label>
+                </div>
+                
+            </div> -->
+            
+            <div class="col">
+                <div class="form-floating">
+                    <input type="tel" name="mobile" id="Phone" class="form-control" placeholder="(000) 000- 0000">
+                    <label for="mobile" class="form-label">Mobile Number</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="street-address-1" class="form-label">Your Home Address</label>
+            <div class="row mb-1">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" id="street-address-1" class="form-control" name="Street" placeholder="-">
+                        <label for="street-address-1" class="form-text">Street Address 1</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- <div class="row mb-1">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control " name="street_address_2" id="street-address-2" placeholder="-">
+                        <label for="street-address-2" class="form-text">Street Address Line-2</label>
+                    </div>
+                    
+                </div>
+            </div> -->
+            <div class="row mb-1">
+                <div class="col-12 col-sm-6 mb-1">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="City" id="city" placeholder="-">
+                        <label for="form-control" class="form-text">City</label>
+                    </div>
+                    
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="Province" id="province" placeholder="-">
+                        <label for="province" class="form-text">State/Province</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row mb-1">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="Country" id="country" placeholder="-">
+                        <label for="country" class="form-text">Country</label>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="PostalCode" id="postal-code" placeholder="-">
+                        <label for="postal-code" class="form-text">ZIP / Postal  Code</label>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 mb-2">
+                    <label for="arrival-date" class="form-label">Arrival - Date and Time</label>
+                        <div class="row">
+                            <div class=" col">
+                                <input class="form-control" type="datetime-local" name="CheckIn" id="arrival-date" placeholder="DD-MM-YY">
+                                <label for="arrival-date" class="form-text">Date & Time</label>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <label for="departure-date" class="form-label">Departure - Date and Time</label>
+                        <div class="row">
+                            <div class=" col">
+                                <input class="form-control" type="datetime-local" name="CheckOut" id="departure-date" placeholder="DD-MM-YY">
+                                <label for="departure-date" class="form-text">Date & Time</label>
+                            </div>
+                            
+               
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="mb-4">
+            
+        </div>
+
+        <div class="mb-4">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <label for="guests" class="form-label">Number of Guests</label>
+                    <input type="number" name="NoOfGuests" id="guests" class="form-control" value="1">
+                </div>
+            </div>
+           
+        </div>
+        <div class="mb-4">
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating">
+                        <textarea name="SpecialRequest" id="special-request" style="height: 100px" class="form-control" placeholder="Special Request"></textarea>
+                        <label for="special-request" class="form-label">Any Special Requests?</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4 row">
+            
+            
+            <div class="col-12 col-sm-5 auto-select" id="gallery-container">
+                        <!-- These hidden inputs are specifically for backend purposes -->
+                        <input type="number" name="RoomID" id="room-id" hidden value="">
+                        <input type="number" name="Rate" id="room-rate" hidden value="">
+                        
+
+
+                        <div class="row" id="gallery">
+                            <div class="col-12 text-center " id="single">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/single.webp" alt="single room">
+                                <p class="mt-2 ">$100/Night - Single Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="double">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/double.webp" alt="double room">
+                                <p class="mt-2 ">$149/Night - Double Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="queen">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/queen.webp" alt="queen room">
+                                <p class="mt-2 ">$160/Night - Queen-Bed Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="king">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/king.webp" alt="king room">
+                                <p class="mt-2 ">$180/Night - King-Bed Room</p>
+                            </div>
+                            
+                            <div class="col-12 hidden text-center" id="hollywood">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/hollywood_twin.webp" alt="hollywood twin room">
+                                <p class="mt-2 ">$180/Night - Hollywood Twin Room</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="cabana">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/cabana.webp" alt="cabana room">
+                                <p class="mt-2 ">$349/Night - Cabana</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="suite">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/suite.webp" alt="suite">
+                                <p class="mt-2 ">$399/Night - Suite</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="presidential">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/presidential_suite.webp" alt="presidential suite">
+                                <p class="mt-2 ">$999/Night - Presidential Suite</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1 vr-1"></div>
+                            <div class="col-11 mb-2">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control"  name="Capacity" id="capacity" placeholder="0" value="1" readonly>
+                                    <label for="capacity" class="form-text">Capacity of Room</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    <!-- </div>
+                </div> -->
+            </div>
+
+            <div class="d-flex col-1 col-sm-1 " id="vr-1" style="height: 300px;">
+                <div class="vr"></div>
+            </div>
+
+            <div class="col-12 hidden" id="manual-selection-panel">
+                <input type="checkbox" name="ManualMode" id="manual-mode-toggle" hidden>
+                <div class="row ">
+                    <div class="col">
+                        <h4>Manually select type and number of rooms</h4>
+                    </div>
+                    <div class="col ">
+                        <div class="f-6 text-black-50 pointer-hover text-end" id="manual-selection-off">Switch to Auto Mode</div>
+                    </div>
+                </div>
+                <table class="table table-light table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" >#</th>
+                            <th scope="col-4 col-sm-auto" >Type</th>
+                            <th scope="col" >Capacity</th>
+                            <th scope="col" ></th>
+                            <th scope="col" >Rooms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="py-2">
+                            <th scope="row">1</th>
+                            <td>
+                                $100/Night - Single Room
+                                <input type="number" name="rate2001" id="rate2001" hidden value="100">
+                            </td>
+                            <td>
+                                1 Person
+                                <input type="number" name="capacity2001" id="" hidden value="1">
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2001" name="Select2001">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2001" name="NoOf2001" placeholder="0" readonly>
+                                    <label for="no-of-2001" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">2</th>
+                            <td>
+                                $149/Night - Double Room
+                                <input type="number" name="rate2002" id="rate2002" value="149" hidden>
+                            </td>
+                            <td>
+                                2 Person
+                                <input type="number" name="capacity2002" id="" value="2" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2002">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2002" placeholder="0" readonly>
+                                    <label for="no-of-2002" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">3</th>
+                            <td>
+                                $160/Night - Queen-Bed Room
+                                <input type="number" name="rate2003" id="rate2003" value="160" hidden>
+                            </td>
+                            <td>
+                                2 Person
+                                <input type="number" name="capacity2003" id="" value="2" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2003">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2003" placeholder="0" readonly>
+                                    <label for="no-of-2003" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">4</th>
+                            <td>
+                                $180/Night - King-Bed Room
+                                <input type="number" name="rate2004" id="rate2004" value="180" hidden>
+
+                            </td>
+                            <td>
+                                2 Person
+                                <input type="number" name="capacity2004" id="" value="2" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2004">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2004" placeholder="0" readonly>
+                                    <label for="no-of-2004" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">5</th>
+                            <td>
+                                $180/Night - Hollywood Twin Room 
+                                <input type="number" name="rate2005" id="rate2005" value="180" hidden>
+                            </td>
+                            <td>
+                                2 Person
+                                <input type="number" name="capacity2005" id="" value="2" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2005">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2005" placeholder="0" readonly>
+                                    <label for="no-of-2005" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">6</th>
+                            <td>
+                                $349/Night - Cabana
+                                <input type="number" name="rate2006" id="rate2006" value="349" hidden>
+                            </td>
+                            <td>
+                                4 Person
+                                <input type="number" name="capacity2006" id="" value="4" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2006">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2006" placeholder="0" readonly>
+                                    <label for="no-of-2006" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">7</th>
+                            <td>
+                                $399/Night - Suite
+                                <input type="number" name="rate2007" id="rate2007" value="399" hidden>
+                            </td>
+                            <td>
+                                3 Person
+                                <input type="number" name="capacity2007" id="" value="3" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2007">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2007" placeholder="0" readonly>
+                                    <label for="no-of-2007" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="py-2">
+                            <th scope="row">8</th>
+                            <td>
+                                $999/Night - Presidential Suite
+                                <input type="number" name="rate2008" id="rate2008" value="999" hidden>
+                            </td>
+                            <td>
+                                1 Person
+                                <input type="number" name="capacity2008" value="1" hidden>
+                            </td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="select-2008">
+                                    
+                              </div>
+                            </td>
+                            <td>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no-of-2008" placeholder="0" readonly>
+                                    <label for="no-of-2008" class="form-text"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div class="col-12 col-sm-6 " id="room-details-and-price">
+                <div class="form-floating mb-1 auto-select">
+                    <select class="form-select" name="type_of_room" id="type-of-room">
+                        <option value="single" selected>Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="queen">Queen-Bed Room</option>
+                        <option value="king">King-Bed Room</option>
+                        <option value="hollywood">Hollywood Twin Room</option>
+                        <option value="cabana">Cabana</option>
+                        <option value="suite">Suite</option>
+                        <option value="presidential">Presidential Suite</option>
+                    </select>
+                    <label for="type-of-room" class="form-label">Select the type of room</label>
+                    
+                    <div class="form-text text-black-50 mb-4 text-end pointer-hover " id="manual-selection-on">Manual Selection</div>
+                </div>
+
+
+
+                <label for="total-amount" class="form-label">Total</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" readonly class="form-control" id="total-amount" name="total_amount" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                </div>
+                <div class="row mb-2 ">
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="number-of-rooms" name="NoOfRooms" placeholder="-" value="1" readonly>
+                            <label for="number-of-rooms" class="form-label">Number of Rooms</label>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-12 col-md-6">
+                        <div class="form-floating mb-2">
+                            <input type="number" class="form-control" name="number_of_days" id="stay-days" placeholder="1"  readonly value="1">
+                            <label for="stay-days" class="form-label">Days of Stay</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-12 col-md-6">
+                        <div class="form-floating">
+                            <input type="number" class=" form-control" name="number_of_weekend_days" id="special-price-days" placeholder="1"  readonly value="0">
+                            <label for="special-price-days" class="form-label">Weekend Days</label>
+                        </div>
+                        <div class="form-text">Weekend days implies 15% extra charges*</div>
+                    </div>
+                </div>
+                
+                
+                <div class="reserve mt-5 text-center">
+                    <button type="submit" class="btn btn-primary">Reserve</button>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+    </form>
+</div>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-4">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">© 2022 Dorothy, Inc</p>
+        </footer>
+      </div>
+    
+    <script src="./static/js/jquery-3.6.0.min.js"></script>
+    <script src="./static/js/jquery.validate.min.js"></script>
+    <script src="./static/js/reservation.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.heading{
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
+.vr-1{
+    height: 400px !important;
+}
+.d-inline-b{
+    display: inline-block;
+}
+
+.pointer-hover:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+@media only screen and (max-width: 576px) { 
+    .vr-1{
+        display: none !important;
+        /* height: 0px !important; */
+    }
+  }

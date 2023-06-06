@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/confirm.css">
+    <link rel="icon" type="image/x-icon" href="./static/images/icon2.ico">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-evenly justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+              <h2>Dorothy</h2>
+          </a>
+
+          <div class="text-dark">Confirmation Page</div>
+    
+         
+        </header>
+      </div>
+
+
+      <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6 col-sm-6 col-12 mx-sm-2 mx-2" >
+                   
+                    <h3> <a class="text-dark text-decoration-none" href="http://127.0.0.1:5500/index.html"><</a> Request to book</h3>
+                </div>
+            </div>
+          <div class="row">
+
+            <div class="col-12 col-sm-5 ">
+                <div class="row">
+                        <div class="col hidden" id="booking-details">
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-between">
+                                        <h4 class="d-inline-b">Details of Booking</h4>
+                                        <div class="h6 d-inline-b text-black-50 hidden pointer-hover" id="hide-details">Simple View.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-label">
+                                    <label for="first-name" class="form-label">Full Name</label>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class=" col-sm-6 col-12">
+                                            <input type="text" id="first-name" class="form-control" name="FirstName" value="Sample" readonly>
+                                            <label for="first-name" class="form-text">First Name</label>
+                                    </div>
+                                    <div class="col-sm-6 col-12">
+                                            <input type="text" id="last-name" class="form-control" name="LastName" value="Full Name" readonly>
+                                            <label for="last-name" class="form-text">Last Name</label> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4 row">
+                                <div class="col-sm-6 col-12 mb-2">
+                                    <div class="form-floating">
+                                        <input type="email" id="email" name="Email" class="form-control" placeholder="example@gmail.com" value="ThisEmailWillBeFrom@BackEndOf.net" readonly> 
+                                        <label for="email" class="form-label">Contact Email</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                                
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="tel" name="Phone" id="mobile" class="form-control" placeholder="(000) 000- 0000" value="2345678911232" readonly>
+                                        <label for="mobile" class="form-label">Mobile Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="mb-4">
+                                <label for="street-address-1" class="form-label">Your Home Address</label>
+                                <div class="row mb-1">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" id="street-address-1" class="form-control" name="Street" placeholder="-" value="Sample address line 1" readonly>
+                                            <label for="street-address-1" class="form-text">Street Address 1</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- <div class="row mb-1">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control " name="street_address_2" id="street-address-2" placeholder="-">
+                                            <label for="street-address-2" class="form-text">Street Address Line-2</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div> -->
+                                <div class="row mb-1">
+                                    <div class="col-12 col-sm-6 mb-1">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="City" id="city" placeholder="-" value="Amritsar" readonly>
+                                            <label for="form-control" class="form-text">City</label>
+                                        </div>
+                                        
+                                    </div>
+                    
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="Province" id="province" placeholder="-" value="Punjab" readonly>
+                                            <label for="province" class="form-text">State/Province</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="Country" id="country" placeholder="-" value="India" readonly>
+                                            <label for="country" class="form-text">Country</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="PostalCode" id="postal-code" placeholder="-" value="142001" readonly>
+                                            <label for="postal-code" class="form-text">ZIP / Postal  Code</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 mb-2">
+                                        <label for="arrival-date" class="form-label">Arrival - Date and Time</label>
+                                            <div class="row">
+                                                <div class=" col">
+                                                    <input class="form-control" type="datetime-local" name="CheckIn" id="arrival-date" placeholder="DD-MM-YY" value="2022-04-12T23:20:50.52" readonly>
+                                                    <label for="arrival-date" class="form-text">Date & Time</label>
+                                                </div>
+                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="departure-date" class="form-label">Departure - Date and Time</label>
+                                            <div class="row">
+                                                <div class=" col">
+                                                    <input class="form-control" type="datetime-local" name="CheckOut" id="departure-date" placeholder="DD-MM-YY" value="2022-04-12T23:20:50.52" readonly>
+                                                    <label for="departure-date" class="form-text" >Date & Time</label>
+                                                </div>
+                                                
+                                   
+                                            </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                    
+                            <div class="mb-4">
+                                
+                            </div>
+                    
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4">
+                                        <label for="guests" class="form-label">Number of Guest</label>
+                                        <input type="number" name="NoOfGuests" id="guests" class="form-control" value="2" readonly>
+                                    </div>
+            
+                                    <div class="col-12 col-sm-4">
+                                        <label for="booking-id" class="form-label">Booking ID</label>
+                                        <input type="number" class="form-control" id="booking-id" value="4001" readonly>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <textarea 
+                                             name="SpecialRequest" id="special-request" style="height: 100px" class="form-control" placeholder="Special Request"  readonly>No special Requests</textarea>
+                                            <label for="special-request" class="form-label">Your Special Requests</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gallery1">
+                         <div class="row" id="inserted-gallery">
+                            <div class="col-12 text-center " id="2001">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/single.webp" alt="single room">
+                                <p class="mt-2 ">$100/Night - Single Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="2002">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/double.webp" alt="double room">
+                                <p class="mt-2 ">$149/Night - Double Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="2003">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/queen.webp" alt="queen room">
+                                <p class="mt-2 ">$160/Night - Queen-Bed Room</p>
+                            </div>
+                            <div class="col-12 hidden text-center" id="2004">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/king.webp" alt="king room">
+                                <p class="mt-2 ">$180/Night - King-Bed Room</p>
+                            </div>
+                            
+                            <div class="col-12 hidden text-center" id="2005">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/hollywood_twin.webp" alt="hollywood twin room">
+                                <p class="mt-2 ">$149/Night - Hollywood Twin Room</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="2006">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/cabana.webp" alt="cabana room">
+                                <p class="mt-2 ">$200/Night - Cabana</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="2007">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/suite.webp" alt="suite">
+                                <p class="mt-2 ">$399/Night - Suite</p>
+                            </div>
+
+                            <div class="col-12 hidden text-center" id="2008">
+                                <img class="img-fluid rounded hotel-img" src="./static/images/presidential_suite.webp" alt="presidential suite">
+                                <p class="mt-2 ">$999/Night - Presidential Suite</p>
+                            </div>
+
+                    </div>
+                    </div>
+                   
+            </div>
+            <div class="col-1">
+                <div class="d-flex col-1 col-sm-1 vr-1" >
+                    <div class="vr"></div>
+                </div>
+            </div>
+
+            
+
+            <div class="col" id="overview-panel">
+                <div class="hidden" id="gallery2">
+                    <div class="row" id="inserted-gallery">
+                       <div class="col-12 text-center " id="single">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/single.webp" alt="single room">
+                           <p class="mt-2 ">$100/Night - Single Room</p>
+                       </div>
+                       <div class="col-12 hidden text-center" id="double">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/double.webp" alt="double room">
+                           <p class="mt-2 ">$149/Night - Double Room</p>
+                       </div>
+                       <div class="col-12 hidden text-center" id="queen">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/queen.webp" alt="queen room">
+                           <p class="mt-2 ">$160/Night - Queen-Bed Room</p>
+                       </div>
+                       <div class="col-12 hidden text-center" id="king">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/king.webp" alt="king room">
+                           <p class="mt-2 ">$180/Night - King-Bed Room</p>
+                       </div>
+                       
+                       <div class="col-12 hidden text-center" id="hollywood">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/hollywood_twin.webp" alt="hollywood twin room">
+                           <p class="mt-2 ">$149/Night - Hollywood Twin Room</p>
+                       </div>
+
+                       <div class="col-12 hidden text-center" id="cabana">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/cabana.webp" alt="cabana room">
+                           <p class="mt-2 ">$200/Night - Cabana</p>
+                       </div>
+
+                       <div class="col-12 hidden text-center" id="suite">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/suite.webp" alt="suite">
+                           <p class="mt-2 ">$399/Night - Suite</p>
+                       </div>
+
+                       <div class="col-12 hidden text-center" id="presidential">
+                           <img class="img-fluid rounded hotel-img" src="./static/images/presidential_suite.webp" alt="presidential suite">
+                           <p class="mt-2 ">$999/Night - Presidential Suite</p>
+                       </div>
+
+               </div>
+               </div>
+
+                <div class="row mb-4" id="trip-overview">
+                    <div class="col-12">
+                        <div class="row mb-1">
+                            <div class="col d-flex justify-content-between ">
+                                <h4 class="d-inline-b " >Your trip</h4>
+                                <h6 class="d-inline-b text-black-50 mx-2 pointer-hover" id="show-details">Details.</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="row" id="trip-overview-dates">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">Dates</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-muted" id="dates-overview">27 - 30 Jul</div>
+                                </div>
+                            </div>
+                            <div class="col-6 text-end text-md-center" id="trip-overview-guests">
+                                <div class="row">
+                                    <div class="col-12">Guests</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-muted" id="guests-overview">1 guest</div>
+                                    
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                
+
+                <div class="row mb-4" id="price-details">
+                    <div class="row mb-2">
+                        <div class="col mb-3 h4">
+                            Price Details
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row mb-1">
+
+                                <div class="col-md-9 col-6 text-black-50" id="weekdays-price-detail">
+                                    <!-- normal_price of one room X days os stay X number of rooms -->
+                                    <em>$100 x 10 days x 2 rooms</em>
+                                    <p class="f-6">Single Bed</p>
+                                </div>
+                                <div class="col-md-3 col-6 text-muted text-end text-sm-end" id="weekdays-price">
+                                    <!-- price of one room -->
+                                    $41660
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row mb-1">
+
+                                <div class="col-md-9 col-6 text-black-50" id="weekdays-price-detail">
+                                    <!-- normal_price of one room X days os stay X number of rooms -->
+                                    <em>$149 x 10 days x 2 rooms</em>
+                                    <p class="f-6">Double Bed</p>
+                                </div>
+                                <div class="col-md-3 col-6 text-muted text-end text-sm-end" id="weekdays-price">
+                                    <!-- price of price of one room -->
+                                    $62073.4
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row mb-1">
+
+                                <div class="col-md-9 col-6">
+                                    <!-- Total Amount -->
+                                    <h6>Total Amount</h6>
+                                </div>
+                                <div class="col-md-3 col-6 text-end text-sm-end" id="total-price">
+                                    <!-- price of weekends -->
+                                    $103733.4
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-primary" id="confirm">Confirm</button>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="./static/js/jquery-3.6.0.min.js"></script>
+      <script src="./static/js/jquery.validate.min.js"></script>
+      <script src="./static/js/confirm.js"></script>
+</body>
+</html>
